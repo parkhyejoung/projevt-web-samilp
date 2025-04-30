@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="descriptoin" content="">
+    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소셜 네트워크 | SPC 삼립</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
@@ -10,88 +12,89 @@
     <link href="./styles/social_networks.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1><a href="./index.html"><img src="./images/logo.png" alt="spc삼립"></a></h1>
-        <nav>
-            <ul class="gnb">
-                <li><a href="./company.html">COMPANY</a></li>
-                <li><a href="#">BRANDS</a></li>
-                <li><a href="./ir.html">IR</a></li>
-                <li><a href="#">SNS</a></li>
-                <li><a href="#">RECRUIT</a></li>
-                <li><a href="#">STORE</a></li>
+    <div id="wrap">
+        <header>
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="spc삼립"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="./company.html">COMPANY</a></li>
+                    <li><a href="#">BRANDS</a></li>
+                    <li><a href="./ir.html">IR</a></li>
+                    <li><a href="./social_networks.html">SNS</a></li>
+                    <li><a href="#">RECRUIT</a></li>
+                    <li><a href="#">STORE</a></li>
+                </ul>
+            </nav>
+            <ul class="right_menu">
+                <li><a href="#">CUSTOMER</a></li><!-- 서브로 등록할 메뉴가 있으면 li로 등록 -->
+                <li><a href="#"><img src="./images/icon_lang_kr.png" alt="한국어변경"></a></li>
+                <li><a href="#"><img src="./images/icon_search.png" alt="검색하기"></a></li>
             </ul>
-        </nav>
-        <ul class="right_menu">
-            <li><a href="#">CUSTOMER</a></li><!-- 서브로 등록할 메뉴가 있으면 li로 등록 -->
-            <li><a href="#"><img src="./images/icon_lang_kr.png" alt="한국어변경"></a></li>
-            <li><a href="#"><img src="./images/icon_search.png" alt="검색하기"></a></li>
-        </ul>
-    </header>
-    <div class="wrap">
-    <main>
-        <div class="path">
-            <a href="./index.html">home</a>
-            <img src="./images/double_arrow.png" alt="">
-            <em>social_networks</em>
-        </div>
-        <h1>소셜 네트워크</h1>
-        <p>spc 삼립의 다양한 이벤트와 맛있는 이야기</p>
-        <section class="bg">
-            <div class="sns_list">
-                <a href="#">
-                    <img src="./images/sns_image/youtube.png" alt="유투브"></lmg>
-                    <p>Yotube</p>
-                    <span>먹고 보고 소화하는 samlip studio</span>
-                </a>
-                <a href="#">
-                    <img src="./images/sns_image/instagram.png" alt="인스타그램"></lmg>
-                    <p>Instragram</p>
-                    <span>보고,공유하고,저장하고 싶은 군침도는 콘텐츠</span>
-                </a>
-                <a href="#">
-                    <img src="./images/sns_image/facebook.png" alt="페이스북"></lmg>
-                    <p>Facebook</p><span>맛있는 이야기로 하나 되는 소통 플랫폼</span>
-                </a>
+        </header>
+        <main>
+            <div class="path">
+                <a href="./index.html">home</a>
+                <img src="./images/double_arrow.png" alt="">
+                <em>social networks</em>
             </div>
-        </section>
-    </main>
-    </div>
-    <footer>
-        <div class="top">
-            <div class="left">
-                <a href="#">개인정보처리방침</a>
-                <a href="#">영상정보기기 운영관리방침</a>
-                <a href="#">거래희망회사 사전등록</a>
-                <a href="#">동반성장</a>
-                <a href="#"><img src="./images/ccm.png" alt=""></a>
-            </div>
-            <div class="right"> 
-<!--                     <div class="family_site site">
-                    <span>FAMILT SITES</span>
-                    <img src="./images/arow.png" alt="">
-                </div> --> 
-                <!-- 서버와 연결된 작업(로그인,회원가입, 장바구니,구매하기,회원정보,게시판 등...)이 아닌 단순 수행작업일 경우는 input , button 등의 태그를
-                작성해도 form 태그를 추가 작성하지 않아도 된다 -->
-                <select name="family_site" class="site"><!-- 그룹에 관련된 속성 -->
-                    <option>FAMLIY SITE</option>
-                    <option value="http://pasis.co.Ko">PARIS BAGUETTE</option><!-- 선택 속성 -->
-                    <option value="http://baskinrobbins.co.kr">Baskin Robbins</option>
-                    <option value="http://dunkindounts.co.kr">Dunkin</option>
-                </select>
-                <div class="site_map site">
-                    <span>SITE MAP</span>
-                    <img src="./images/arow.png" alt="">
+            <h1>소셜 네트워크</h1>
+            <p>spc 삼립의 다양한 이벤트와 맛있는 이야기</p>
+            <section class="bg"><!-- 배경100% -->
+                <div class="container"><!-- 1280 가운데 -->
+                    <a href="#">
+                        <p><img src="./images/sns/y.png" alt="유투브"></p>
+                        <h2>Yotube</h2>
+                        <p>먹고 보고 소화하는 samlip studio</p>
+                    </a>
+                    <a href="#">
+                        <p><img src="./images/sns/i.png" alt="인스타그램"></p>
+                        <h2>Instragram</h2>
+                        <p>보고,공유하고,저장하고 싶은 군침도는 콘텐츠</p>
+                    </a>
+                    <a href="#">
+                        <p><img src="./images/sns/f.png" alt="페이스북"></p>
+                        <h2>페이스북</h2>
+                        <p>맛있는 이야기로 하나 되는 소통 플랫폼</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer_full_w">
+            <div class="top">
+                <div class="left">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">영상정보기기 운영관리방침</a>
+                    <a href="#">거래희망회사 사전등록</a>
+                    <a href="#">동반성장</a>
+                    <a href="#"><img src="./images/ccm.png" alt=""></a>
+                </div>
+                <div class="right"> 
+    <!--                     <div class="family_site site">
+                        <span>FAMILT SITES</span>
+                        <img src="./images/arow.png" alt="">
+                    </div> --> 
+                    <!-- 서버와 연결된 작업(로그인,회원가입, 장바구니,구매하기,회원정보,게시판 등...)이 아닌 단순 수행작업일 경우는 input , button 등의 태그를
+                    작성해도 form 태그를 추가 작성하지 않아도 된다 -->
+                    <select name="family_site" class="site"><!-- 그룹에 관련된 속성 -->
+                        <option>FAMLIY SITE</option>
+                        <option value="http://pasis.co.Ko">PARIS BAGUETTE</option><!-- 선택 속성 -->
+                        <option value="http://baskinrobbins.co.kr">Baskin Robbins</option>
+                        <option value="http://dunkindounts.co.kr">Dunkin</option>
+                    </select>
+                    <div class="site_map site">
+                        <span>SITE MAP</span>
+                        <img src="./images/arow.png" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="bottom">
-            <address>
-                고객센터 전화번호 080-739-8572 (월~금 09:00~17:00)<br>
-                01,Gongdan 1-dearo,Siheung-si,Gyoenggi-do,Republic of Korea ㈜SPC삼립 대표이사 황종현
-            </address>
-            <p>&copy;SPC Samilp. All rigths reserved.</p>
-        </div>
-    </footer>   
+            <div class="bottom">
+                <address>
+                    고객센터 전화번호 080-739-8572 (월~금 09:00~17:00)<br>
+                    01,Gongdan 1-dearo,Siheung-si,Gyoenggi-do,Republic of Korea ㈜SPC삼립 대표이사 황종현
+                </address>
+                <p>&copy;SPC Samilp. All rigths reserved.</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
