@@ -2,7 +2,6 @@
 #wrap {}
 #wrap header {
     position: relative; /* lnb_bg의 부모 위치 기준 설정 */
-    background-color: aqua;
     height: 92px;
     padding: 0 60px;
     /* container(header) item(h2,nav,right_menu) */
@@ -15,7 +14,6 @@
 #wrap header h1 a {}
 #wrap header h1 a img {}
 #wrap header nav {
-    background-color: lime;
 }
 #wrap header nav .gnb {
     /* container(.gnb) item(li) */
@@ -32,21 +30,17 @@
 #wrap header nav .gnb > li > a {
     font-weight: 600;
     font-size: 1.125rem;
-    border: 1px solid red;
     display: block;
     height: 92px;
     line-height: 92px;
 }
 /* ========================서브메뉴 */
-#wrap header nav .gnb > li:first-child:hover .lnb_bg {
-    display: block;
-}
-#wrap header nav .gnb > li:nth-child(3):hover .lnb_bg {
-    display: block;
-}
-#wrap header nav .gnb > li:nth-child(2):hover .lnb_bg {
-    display: block;
-}
+#wrap header nav .gnb > li:first-child:hover .lnb_bg { /* company */
+    display: block;}
+#wrap header nav .gnb > li:nth-child(2):hover .lnb_bg {  /* barands */
+    display: block;}
+#wrap header nav .gnb > li:nth-child(3):hover .lnb_bg { /* ir */
+    display: block;}
 #wrap header nav .gnb > li .lnb_bg {
     background:rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -54,10 +48,10 @@
     width: 100%; 
     padding: 50px 0;/* absolute 대상일경우 width값은 부모설정된 요소의 상대값(%)으로 결정된다 */
     /* 초기 숨기기(마우스 올릴때만 보이도록) */
-    display: none;
+    /* display:none */
+    display:none
 }
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 {
-    background-color: yellow;
     width: max-content;
     margin: 0 auto;
     display: flex;
@@ -75,17 +69,47 @@
     font-size: 1.063rem;
 }
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 {
-    border: 2px solid red;
     margin-top: 14px;
 }
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li {
     margin-bottom: 16px;
 }
-#wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li a {
-} 
-/* ========================우측 보조메뉴 */
+#wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li a {} 
+/* gnb 2. brands 서브메뉴 개별디자인 */
+#wrap header nav .gnb > li #lnb_brands {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li p {
+    margin-top: 12px;
+}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > a {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > a h2 {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > a p {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > a p img {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > .lnb_depth2 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 280px;
+    justify-content: space-between;
+}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > .lnb_depth2 > li {
+    margin-bottom: 14px;
+}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > .lnb_depth2 > li > a {}
+#wrap header nav .gnb > li #lnb_brands .lnb_depth1 > li > .lnb_depth2 > li > a  img {}
+/* ========================gnb 2. brands 서브메뉴 개별디자인(이미지효과) */
+#wrap header nav .gnb > li #lnb_brands a img {
+    filter: grayscale(100%) opacity(80%);
+    border: 1px solid #fff;}
+#wrap header nav .gnb > li #lnb_brands a:hover img {filter: grayscale(0%);
+    border: 1px solid #000;}
+/* ========================우측 보조메뉴 시작 */
 #wrap header .right_menu {
-    background-color: yellow;
     display: flex;
     flex-flow: row nowrap;
 }
@@ -119,20 +143,17 @@
     padding: 50px 60px;
 }
 #wrap footer {
-    background-color: aqua;
     width: 1280px; 
     margin: 0 auto;
     padding: 50px 0;
 }
 #wrap footer .top {
-    background-color: blue;
     margin-bottom: 12px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
 #wrap footer .top .left {
-    background-color: brown;
     display: flex; flex-flow: row nowrap;
     align-items: center;
 }
