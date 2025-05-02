@@ -279,10 +279,11 @@ body, html {scroll-behavior:smooth;}
     position: absolute; /* 겹치는 대상 */
     left: 0; top: 0;/* absolute 작성해서 좌표 필수 */
     width: 100%; height: 100%;
+    display: flex; flex-flow: column nowrap; justify-content: center; align-items: center;
     display: none; /* absolute의 부모대상과 동일한 크기 설정*/
 }
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li:hover .logo_details {
-    display: block;
+    display: flex;
 }
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo_details * {
     color: #fff;
@@ -296,7 +297,9 @@ body, html {scroll-behavior:smooth;}
     line-height: 1.4;}
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo_details .view {
     font-size:0.75rem;
-    border: 1px solid #fff; padding: 2px 4px;}
+    border: 1px solid #fff; padding: 2px 4px;
+    
+}
 /* ======================4. 삼립 브랜드(슬라이드버튼) */
 #wrap main .brands_all .brands_wrap .brands_btn {
     margin: 30px 0;
