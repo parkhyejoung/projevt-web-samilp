@@ -1,126 +1,309 @@
-/* index.css 메인 첫 페이지의 <main> */
-main {}
-main .ad_wrap {} /* 슬라이드+버튼 그룹 */
-main .ad_wrap .ad_contalner {} /* 슬라이드 그룹 */
-main .ad_wrap .ad_contalner .ad {
+/* index.css 메인 첫 페이지의 <#wrap main> */
+body, html {scroll-behavior:smooth;}
+/* 우측 고정 영역 */
+.right_nav {
+    position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+    text-align: right;
+    z-index: 998;
+}
+.right_nav a {
+    display: block;
+    margin-bottom: 20px;
+    display: flex; /* 자식,자손이 인라인이어도 크기 인식가능 */
+    justify-content: flex-end;
+}
+.right_nav a:hover em {
+    display: block; /* 마우스 hover 글자보이기 */
+}
+.right_nav a em {
+    display: none; /* 글자 숨기기 */
+}
+
+.right_nav a span {
+    /*     display: inline-block; */
+    background-color: #fff;
+    width: 12px; height: 12px; border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-left: 10px;
+}
+/* 메인 시작 */
+#wrap main {}
+#wrap main .ad_wrap {} /* 슬라이드+버튼 그룹 */
+#wrap main .ad_wrap .ad_contalner {} /* 슬라이드 그룹 */
+#wrap main .ad_wrap .ad_contalner .ad {
     display:none; /* 모두 숨기기 */
     height: 800px;
     background-position: center;/* <이렇게 입력해야 화면 크기 줄여도 센터위주로 줄어듬 */
     position: relative;
 } /* 슬라이드 */
-main .ad_wrap .ad_contalner .ad .ad_txt {
+#wrap main .ad_wrap .ad_contalner .ad .ad_txt {
     width: 1280px;
 /*     margin: 0 auto; <position: absolute; 사용시 무의미 */ 
     position: absolute;
     bottom: 215px;
     left: 50%; transform: translateX(-50%); /* absolute로 위치 설정 시 요소를 가운데로 가는 규칙 */
 }
-main .ad_wrap .ad_contalner .ad .ad_txt h2 {
+#wrap main .ad_wrap .ad_contalner .ad .ad_txt h2 {
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 13px;
 }
-main .ad_wrap .ad_contalner .ad .ad_txt p {
+#wrap main .ad_wrap .ad_contalner .ad .ad_txt p {
     font-size: 1rem;
     line-height: 1.6;
 }
-main .ad_wrap .ad_btn {
+#wrap main .ad_wrap .ad_btn {
     text-align: center;
     padding: 34px 0;
 }
-main .ad_wrap .ad_btn #ad_prev {
+#wrap main .ad_wrap .ad_btn #ad_prev {
     margin-right: 10px;
 }
-main .ad_wrap .ad_btn #ad_prev img {}
-main .ad_wrap .ad_btn #ad_next {
+#wrap main .ad_wrap .ad_btn #ad_prev img {}
+#wrap main .ad_wrap .ad_btn #ad_next {
     transform: scaleX(-1); /* 1 정비율 -1역비율 */
 }
-main .ad_wrap .ad_btn #ad_next img {}  
+#wrap main .ad_wrap .ad_btn #ad_next img {}  
 /* ========================================광고개발영역 */
-main .ad_wrap .ad_contalner .ad1 {
+#wrap main .ad_wrap .ad_contalner .ad1 {
     display: block;
     background-image: url(../images/ad_01.jpg);
 }
-main .ad_wrap .ad_contalner .ad2 {}
-main .ad_wrap .ad_contalner .ad3 {}
-main .ad_wrap .ad_contalner .ad4 {}
-main .ad_wrap .ad_contalner .ad5 {}
+#wrap main .ad_wrap .ad_contalner .ad2 {}
+#wrap main .ad_wrap .ad_contalner .ad3 {}
+#wrap main .ad_wrap .ad_contalner .ad4 {}
+#wrap main .ad_wrap .ad_contalner .ad5 {}
 /* ======================================2. 뉴스&공지사항 */
-main .news_all {
+#wrap main .news_all {
     text-align: center;
 }
-main .news_all h2 {
+#wrap main .news_all h2 {
     font-weight: 600;
     font-size: 2.5rem;
 }
-main .news_all > p {
+#wrap main .news_all > p {
     font-size: 1rem;
     margin-top: 20px;
     margin-bottom: 100px;
 }
-main .news_all .news_wrap {
-    border: 5px solid red;
+#wrap main .news_all .news_wrap {
     width: 1370px;
     overflow: hidden; 
     margin:0 auto; /* 화면보다 크기가 작을때 가운데배치 */
 }
-main .news_all .news_wrap .news_container {
-    border: 5px solid blue;
+#wrap main .news_all .news_wrap .news_container {
     display: flex; flex-flow: row nowrap;
     width: max-content;
     text-align: left;
 }
-main .news_all .news_wrap .news_container .news {
-    background-color: yellow;
+#wrap main .news_all .news_wrap .news_container .news {
     width: 311px; height: 287px;
     margin-right: 42px;
     border: 1px solid #ccc;
     position: relative;
 }
-main .news_all .news_wrap .news_container .news:hover {
+#wrap main .news_all .news_wrap .news_container .news:hover {
     border: 1px solid #0000ff;
 }
-main .news_all .news_wrap .news_container .news a {}
-main .news_all .news_wrap .news_container .news a p {}
-main .news_all .news_wrap .news_container .news a p img {}
-main .news_all .news_wrap .news_container .news a h3 {
+#wrap main .news_all .news_wrap .news_container .news a {}
+#wrap main .news_all .news_wrap .news_container .news a p {}
+#wrap main .news_all .news_wrap .news_container .news a p img {}
+#wrap main .news_all .news_wrap .news_container .news a h3 {
     font-weight: 600;
     font-size: 1.125rem;
 }
-main .news_all .news_wrap .news_container .news .date {
+#wrap main .news_all .news_wrap .news_container .news .date {
     position: absolute;
     bottom: 20px; left: 20px;
 }
-main .news_all .news_wrap .news_btn {
+#wrap main .news_all .news_wrap .news_btn {
     margin-top: 70px;
 }
-main .news_all .news_wrap .news_btn #news_prev {}
-main .news_all .news_wrap .news_btn #news_prev img {}
-main .news_all .news_wrap .news_btn #news_next {}
-main .news_all .news_wrap .news_btn #news_next img {
+#wrap main .news_all .news_wrap .news_btn #news_prev {}
+#wrap main .news_all .news_wrap .news_btn #news_prev img {}
+#wrap main .news_all .news_wrap .news_btn #news_next {}
+#wrap main .news_all .news_wrap .news_btn #news_next img {
     transform: scaleX(-1);
 }
-main .news_all .all_news {
+#wrap main .news_all .all_news {
     border: 1px solid #000;
     padding: 20px 60px;
     display: flex; /* display 중복으로 쓰면안됨 */
     width: max-content;
     margin:20px auto 50px;
 }
-main .news_all .all_news img {
+#wrap main .news_all .all_news img {
     text-align: center;
     margin-right: 8px;
 }
-main .news_all .all_news em {
+#wrap main .news_all .all_news em {
     font-weight: 600;
 }
 /* =================================all_news 버튼 hover 효과 모음 */
-main .news_all .all_news:hover {
+#wrap main .news_all .all_news:hover {
     background-color: #000;
 }
-main .news_all .all_news:hover img {
+#wrap main .news_all .all_news:hover img {
     filter: invert(100%);
 }
-main .news_all .all_news:hover em {
+#wrap main .news_all .all_news:hover em {
     color: #fff;
+}
+/* ==================================3.삼립 스튜디오 */
+#wrap main .studio_wrap {
+    position: relative;
+    text-align: center;
+    /* open의 기준 */
+}
+#wrap main .studio_wrap h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+#wrap main .studio_wrap p {
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 100px;
+}
+/* ==================================3.삼립 스튜디오 - 유튜브 채널 미리보기 */
+#wrap main .studio_wrap .studio_list {
+    width: 1370px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 80px auto;
+}
+#wrap main .studio_wrap .studio_list a {
+    margin-bottom: 50px;
+}
+#wrap main .studio_wrap .studio_list a img {}
+/* ==================================3.삼립 스튜디오 - 유투브 채널 OPEN 영역*/
+#wrap main .studio_wrap .studio_open {
+    background-color: rgba(0, 0,0, 0.8);
+    position: absolute; left: 0; top: 0; /* absolute 쓸때는 좌표 절대 잊지말기, absolute가 적용된 대상은 그 대상이 block이어도 자동으로 inline-block처럼 자식의 내용만큼한 크기를 인식하기때문에 별도의 width 크기를 반드시 설정해야한다 (fixed 동일) */
+    width: 100vw; height: 100vh; /*100vh,vw인 이유 부모의 크기에 따라 달라질수 있어서 배경 짤릴수있으므로 이렇게 설정*/
+    display: none; /* 초기 숨기기 (클릭할때만 보이도록) */
+} 
+#wrap main .studio_wrap .studio_open .open_container { /* 영상 가운데로 하려고 크기 맞출 부모 */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; /* 수직 가운데 */
+    align-items: center; /* 수평 가운데 */
+}
+#wrap main .studio_wrap .studio_open .open_container .close {
+    color: #fff;
+    width: 900px;
+    text-align: right;
+}
+#wrap main .studio_wrap .studio_open .open_container .youtube {}
+#wrap main .studio_wrap .studio_open .open_container .youtube iframe {
+    display: none;/* 모두 숨기기 */
+    width: 900px;
+}
+#wrap main .studio_wrap .studio_open .open_container .youtube iframe:first-child {
+    display: block;
+}
+/* ==================================3.삼립 스튜디오 - (고정) 하단 링크*/
+#wrap main .studio_wrap .youtube_link {
+    border: 1px solid #000;
+    padding: 20px 60px;
+    display: flex; 
+    flex-flow: row nowrap;
+    align-items: center;
+    width: max-content;
+    margin:20px auto 50px;
+}
+#wrap main .studio_wrap .youtube_link img {}
+#wrap main .studio_wrap .youtube_link em {}
+/* ==================================3.삼립 스튜디오 - (고정) 하단 링크(hover)*/
+#wrap main .studio_wrap .youtube_link:hover {
+    background-color: #000;
+}
+#wrap main .studio_wrap .youtube_link:hover img {
+    filter: invert(100%);
+}
+#wrap main .studio_wrap .youtube_link:hover em {
+    color: #fff;
+}
+/* ======================4. 삼립 브랜드 */
+#wrap main .brands_all {
+    text-align: center;
+    background-color: #F1F1F1;
+}
+#wrap main .brands_all h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+#wrap main .brands_all > p {
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+/* ======================4. 삼립 브랜드(슬라이드) */
+#wrap main .brands_all .brands_wrap {
+    width: 1370px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#wrap main .brands_all .brands_wrap .brands_container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: max-content;
+}
+#wrap main .brands_all .brands_wrap .brands_container > * {
+    width: 1370px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+/* 슬라이드 12개에 대한 정렬값(부모 기준 flex) */
+#wrap main .brands_all .brands_wrap .brands_container .brands_slide1 {}
+#wrap main .brands_all .brands_wrap .brands_container .brands_slide2 {}
+/* ======================4. 삼립 브랜드(개별슬라이드시작) */
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li {
+    width: 200px;
+    height: 120px;
+    margin-bottom: 50px;
+    position: relative; /* 부모기준 */
+}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li:nth-child(6) ~ li {
+    margin-bottom: 0%; /* 밑에 있는 여백 한번에 제거 */
+}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo {}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo img {}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo_details {
+    background-color: #36b4e5;
+    position: absolute; /* 겹치는 대상 */
+    left: 0; top: 0;/* absolute 작성해서 좌표 필수 */
+    width: 100%; height: 100%;
+    display: none; /* absolute의 부모대상과 동일한 크기 설정*/
+}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li:hover .logo_details {
+    display: block;
+}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo_details * {
+    color: #fff;
+    }
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo_details h3 {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo_details p {
+    font-size: 0.875rem;
+    line-height: 1.4;}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=silde] li .logo_details .view {
+    font-size:0.75rem;
+    border: 1px solid #fff; padding: 2px 4px;}
+/* ======================4. 삼립 브랜드(슬라이드버튼) */
+#wrap main .brands_all .brands_wrap .brands_btn {
+    margin: 30px 0;
+}
+#wrap main .brands_all .brands_wrap .brands_btn #brands_prev {}
+#wrap main .brands_all .brands_wrap .brands_btn #brands_prev img {}
+#wrap main .brands_all .brands_wrap .brands_btn #brands_next {}
+#wrap main .brands_all .brands_wrap .brands_btn #brands_next img {
+    transform:scaleX(-1);
 }
